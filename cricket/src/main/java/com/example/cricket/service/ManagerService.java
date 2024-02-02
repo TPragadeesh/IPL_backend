@@ -1,6 +1,7 @@
 package com.example.cricket.service;
 
 import com.example.cricket.entity.Manager;
+import com.example.cricket.exception.ManagerNotFoundException;
 import com.example.cricket.repo.ManagerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,12 +26,14 @@ public class ManagerService {
     }
 
     public Manager findManager(String teamName, String password) {
+        Manager manager = null;
         if(managerRepo.findById(teamName).isPresent()){
-            Manager manager = managerRepo.findById(teamName).get();
+            manager = managerRepo.findById(teamName).get();
             if(manager.getPassword().compareTo(password)  == 0){
                 return manager;
             }
         }
+
         return null;
     }
     public List<Manager> findAll(){

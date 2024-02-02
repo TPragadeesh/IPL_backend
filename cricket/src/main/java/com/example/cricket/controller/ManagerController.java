@@ -3,6 +3,7 @@ package com.example.cricket.controller;
 import com.example.cricket.dto.ManagerRequestDTO;
 import com.example.cricket.dto.ManagerSignUpRequestDTO;
 import com.example.cricket.entity.Manager;
+import com.example.cricket.exception.ManagerNotFoundException;
 import com.example.cricket.service.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,12 +30,14 @@ public class ManagerController {
     }
 
     @PostMapping("/login")
-    ResponseEntity<Manager> login(@RequestBody ManagerRequestDTO body) {
-        Manager manager = managerService.findManager(body.getTeamName(), body.getPassword());
-        if(manager == null){
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(manager);
+    ResponseEntity<Manager> login(@RequestBody ManagerRequestDTO body) throws ManagerNotFoundException {
+
+            Manager manager = managerService.findManager(body.getTeamName(), body.getPassword());
+            if (manager == null) {
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(manager);
+
     }
     @GetMapping("")
     ResponseEntity<List<Manager>> getAll(){

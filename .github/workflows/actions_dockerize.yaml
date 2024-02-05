@@ -34,7 +34,7 @@ jobs:
       - name: Build with Maven
         run: |
           cd cricket
-          mvn --batch-mode -U --update-snapshots verify
+          mvn --batch-mode --update-snapshots verify
 
 #      - name: staging file
 #        run: mkdir staging && cp cricket/target/*.jar staging
@@ -49,5 +49,3 @@ jobs:
       - name: display spring-app image
         run: docker images
 
-      - name: docker compose
-        run: docker compose up

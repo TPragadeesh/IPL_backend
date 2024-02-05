@@ -34,7 +34,7 @@ jobs:
       - name: Build with Maven
         run: |
           cd cricket
-          mvn --batch-mode --update-snapshots verify
+          mvn --batch-mode -U --update-snapshots verify
 
 #      - name: staging file
 #        run: mkdir staging && cp cricket/target/*.jar staging

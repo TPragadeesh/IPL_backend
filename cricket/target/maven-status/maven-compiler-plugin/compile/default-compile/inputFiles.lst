@@ -1,0 +1,13 @@
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\configuration\ElasticConfig.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\controller\ManagerController.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\controller\PlayerController.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\CricketApplication.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\dto\ManagerRequestDTO.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\dto\ManagerSignUpRequestDTO.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\dto\PlayerRequestDTO.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\entity\Manager.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\entity\Player.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\repo\ManagerRepo.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\repo\PlayerRepo.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\service\ManagerService.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\service\PlayerService.java

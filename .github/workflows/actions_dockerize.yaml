@@ -28,3 +28,6 @@ jobs:
 
       - name: display spring-app image
         run: docker images
+
+      - name: docker compose
+        run: docker compose up

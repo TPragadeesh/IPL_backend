@@ -1,0 +1,30 @@
+name: Dockerize
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  buildingimages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Simply test
+        run: echo "hello world"
+
+      - name: display image
+        run: docker images
+
+      - name: elasticsearch image
+        run: docker pull docker.elastic.co/elasticsearch/elasticsearch:8.8.1
+
+      - name: display elastic image
+        run: docker images
+
+      - name: build spring boot image
+        run: docker build -t spring-app .
+
+      - name: display spring-app image
+        run: docker images

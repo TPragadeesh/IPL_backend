@@ -12,4 +12,5 @@ com\example\cricket\service\PlayerService$1.class
 com\example\cricket\configuration\ElasticConfig.class
 com\example\cricket\CricketApplication.class
 com\example\cricket\entity\Manager.class
+com\example\cricket\exception\ManagerNotFoundException.class
 com\example\cricket\service\PlayerService.class

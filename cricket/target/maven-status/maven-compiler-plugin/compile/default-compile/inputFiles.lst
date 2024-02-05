@@ -7,6 +7,7 @@ C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\dto\M
 C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\dto\PlayerRequestDTO.java
 C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\entity\Manager.java
 C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\entity\Player.java
+C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\exception\ManagerNotFoundException.java
 C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\repo\ManagerRepo.java
 C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\repo\PlayerRepo.java
 C:\Users\prath\Downloads\cricket\cricket\src\main\java\com\example\cricket\service\ManagerService.java

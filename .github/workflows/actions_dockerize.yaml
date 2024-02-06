@@ -68,7 +68,7 @@ jobs:
         run: docker pull pragadeesht/testrepo:latest
 
       - name: build app
-        run: docker build -t spring-app2
+        run: docker build -t spring-app2 .
 
       - name: docker images
         run: docker images

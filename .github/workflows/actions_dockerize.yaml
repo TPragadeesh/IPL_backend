@@ -18,23 +18,23 @@ jobs:
       - name: display image
         run: docker images
 
-      - name: elasticsearch image
-        run: docker pull docker.elastic.co/elasticsearch/elasticsearch:8.8.1
-
-      - name: display elastic image
-        run: docker images
-
-      - name: setting up java maven
-        uses: actions/setup-java@v4
-        with:
-          java-version: '21'
-          distribution: 'temurin'
-          cache: maven
-
-      - name: Build with Maven
-        run: |
-          cd cricket
-          mvn --batch-mode --update-snapshots verify
+#      - name: elasticsearch image
+#        run: docker pull docker.elastic.co/elasticsearch/elasticsearch:8.8.1
+#
+#      - name: display elastic image
+#        run: docker images
+#
+#      - name: setting up java maven
+#        uses: actions/setup-java@v4
+#        with:
+#          java-version: '21'
+#          distribution: 'temurin'
+#          cache: maven
+#
+#      - name: Build with Maven
+#        run: |
+#          cd cricket
+#          mvn --batch-mode --update-snapshots verify
 
 #      - name: staging file
 #        run: mkdir staging && cp cricket/target/*.jar staging
@@ -56,11 +56,19 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: pragadeesht/testrepo:latest
+#      - name: Build and push docker image
+#        uses: docker/build-push-action@v4
+#        with:
+#          context: .
+#          file: ./Dockerfile
+#          push: true
+#          tags: pragadeesht/testrepo:latest
 
+      - name: pull springboot
+        run: docker pull pragadeesht/testrepo:latest
+
+      - name: build app
+        run: docker build -t spring-app2
+
+      - name: docker images
+        run: docker images
